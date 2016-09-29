@@ -12,3 +12,4 @@ function sleep(milliseconds) {
 }
 
 // Your code here...
+var race1 = new JSRacer(3,20,6);
