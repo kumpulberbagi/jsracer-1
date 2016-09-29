@@ -2,6 +2,7 @@
 
 import JSRacer from "./js_racer"
 
+
 function sleep(milliseconds) {
   var start = new Date().getTime();
   for (var i = 0; i < 1e7; i++) {
@@ -12,3 +13,9 @@ function sleep(milliseconds) {
 }
 
 // Your code here...
+var race = new JSRacer();
+race.play()
+// race.print_board();
+// console.log(dice.roll());
+// race.finished();
+// race.print_line()
