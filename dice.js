@@ -2,11 +2,12 @@
 
 class Dice {
   constructor(sides) {
-    this.sides = sides
+    this.sides = sides;
+    this.random = ""
   }
   roll() {
-    this.sides = Math.floor(Math.random()*this.sides)
-    return this.sides
+    this.random = Math.floor(Math.random()*this.sides)
+    return this.random
   }
 }
 

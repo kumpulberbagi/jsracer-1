@@ -8,10 +8,12 @@ class JSRacer {
     this.lengths = length;
     this.sides = sides;
     this.lastPlayer = '';
+    this.pos = []
+
   }
 
   print_board() {
-    return this.print_line(this.players, [1, 2, 3])
+    return this.print_line(this.players, this.advanced_player(this.players))
   }
 
   print_line(players, pos) {
@@ -27,27 +29,28 @@ class JSRacer {
       arr[g].splice(pos[g], 1, players[g]);
     }
     //console.log(arr)
-
+    var display = []
     for(var z = 0 ; z < arr.length ; z++){
-      console.log(arr[z].toString().replace(/,/g,'') + "\n");
+      var print = (arr[z].toString().replace(/,/g,''));
+      display.push(print)
     }
- 
+    return display
   }
-  //
-  // advanced_player(players) {
-  //   var pos = [];
-  //
-  //   for(var x = 0 ; x < player.length ; x++){
-  //     pos[x] = 0;
-  //   }
-  //
-  //   for (var i = 0; i <player; i++){
-  //     var dadu = new Dice(this.sides);
-  //     pos[i] = pos[i] + dadu;
-  //   }
-  //   return pos;
-  // }
-  //
+  advanced_player(players) {
+    if (this.pos.length === 0){
+      var pos = [];
+    for(var x = 0 ; x < players.length ; x++){
+      pos[x] = 0;
+    }
+  }
+    for (var i = 0; i <players.length; i++){
+      // var dadu = new Dice(this.sides);
+      var dadu = Math.floor(Math.random()*this.sides)
+      this.pos[i] = pos[i] + dadu;
+    }
+    return this.pos;
+  }
+
   // finished() {
   //   if( arr.length-1 != "| |"){
   //     advanced_player(players);
