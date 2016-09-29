@@ -7,7 +7,11 @@ class JSRacer {
 
   }
   print_board() {
-
+    var arr = ''
+        for(var i = 0; i<15;i++){
+          arr += " | "
+        }
+          return arr;
   }
   print_line(player, pos) {
 
@@ -25,5 +29,9 @@ class JSRacer {
     console.log("\x1B[2J")
   }
 }
+
+var tampil = new JSRacer();
+console.log(tampil.print_board());
+
 
 export default JSRacer
