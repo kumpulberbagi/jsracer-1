@@ -1,0 +1,27 @@
+{
+  "name": "jsracer-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dice.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yonisetiawan/jsracer-1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yonisetiawan/jsracer-1/issues"
+  },
+  "homepage": "https://github.com/yonisetiawan/jsracer-1#readme",
+  "dependencies": {
+    "terminal-kit": "^0.25.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0"
+  },
+  "keywords": []
+}
